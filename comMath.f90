@@ -1,20 +1,19 @@
-program machine_zero
+program machine_infinity
     implicit none
-    real :: Z, test_val
+    real :: I, test_val
 
-    Z = 1.0
+    I = 1.0
 
-    do
-        if(2.0 * Z <= Z) then
+    do 
+        if(2.0 * I <= I)then
             exit
-        
         end if
-            test_val=Z
-            Z = Z / 2.0
+            test_val=I
+            I = I * 2.0
     end do
 
-    Z = Z * 2.0
+    I = I / 2.0
 
-    print *, 'Machine zero: ', test_val
+    print *, 'Machine infinity: ', test_val
 
-end program machine_zero
+end program machine_infinity
