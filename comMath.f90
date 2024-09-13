@@ -1,17 +1,20 @@
-program machine_epsilon
+program machine_zero
     implicit none
-    real (kind=8) :: epsilon, test_val
+    real :: Z, test_val
 
-    epsilon = 1.0_8
+    Z = 1.0
 
     do
-        if (1.0_8 + epsilon <= 1.0_8) then
+        if(2.0 * Z <= Z) then
             exit
+        
         end if
-            epsilon = epsilon / 2.0_8
+            test_val=Z
+            Z = Z / 2.0
     end do
 
-    epsilon = epsilon * 2.0_8
+    Z = Z * 2.0
 
-    print *, 'Machine epsilon: ', epsilon
-end program machine_epsilon
+    print *, 'Machine zero: ', test_val
+
+end program machine_zero
